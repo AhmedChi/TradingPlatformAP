@@ -2,17 +2,13 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Reflection;
 using TradingPlatformAPI.Repository.CalculationServicies;
 using TradingPlatformAPI.Repository.ControllerServices;
 using IHostingEnvironment = Microsoft.Extensions.Hosting.IHostingEnvironment;
@@ -58,6 +54,8 @@ namespace TradingPlatformAPI
 
             builder.RegisterType<TradesControllerService>().As<ITradesControllerService>();
             builder.RegisterType<TradesCalculationService>().As<ITradesCalculationService>();
+
+            builder.RegisterType<FXTradesControllerService>().As<IFXTradesControllerService>();
 
         }
 

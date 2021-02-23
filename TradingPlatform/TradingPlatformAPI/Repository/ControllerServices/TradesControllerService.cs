@@ -21,7 +21,7 @@ namespace TradingPlatformAPI.Repository.ControllerServices
 
         public List<TradesModel> Filter(List<Trades> trades)
         {
-            var filteredList = trades
+            return trades
                 .Select(s => new TradesModel
                 {
                     Buy = s.Buy,
@@ -31,8 +31,6 @@ namespace TradingPlatformAPI.Repository.ControllerServices
                     Counterparty = s.Counterparty                    
                 })                
                 .ToList();
-
-            return filteredList;
         }
 
         public List<TradesModel> Calculate(List<Trades> actualResults)
