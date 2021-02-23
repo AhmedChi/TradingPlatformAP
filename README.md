@@ -1,3 +1,3 @@
-# ExperianTradingPlatform
+# TradingPlatform
 
-This is the Experian .Net Pod project to create a trading platform
+This is the .Net Pod project to create a trading platform
