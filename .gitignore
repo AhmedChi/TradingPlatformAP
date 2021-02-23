@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/TradingPlatform/.vs/TradingPlatform/v16/.suo
+/TradingPlatform/TradingPlatformAPITests/bin/Debug/netcoreapp3.1
+/TradingPlatform/.vs/TradingPlatform/v16/TestStore/0
