@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TradingPlatformAPI.Models;
+using TradingPlatformAPI.Repository.ControllerServices;
+using TradingPlatformAPI.Repository.dtos;
 
 namespace TradingPlatformAPI.Controllers
 {
@@ -15,18 +15,30 @@ namespace TradingPlatformAPI.Controllers
     public class FxTradesController : ControllerBase
     {
         private readonly TradingPlatformDatabaseContext _context;
+        private readonly IFXTradesControllerService _controllerService;
 
-        public FxTradesController(TradingPlatformDatabaseContext context)
+        public FxTradesController(TradingPlatformDatabaseContext context,
+            IFXTradesControllerService controllerService)
         {
             _context = context;
+            _controllerService = controllerService;
         }
 
         // GET: api/FxTrades
         [EnableCors]
-        [HttpGet]
+        [HttpGet("GetFxTrades")]
         public async Task<ActionResult<IEnumerable<FxTrades>>> GetFxTrades()
         {
             return await _context.FxTrades.ToListAsync();
+        }
+
+        [EnableCors]
+        [HttpGet("GetFilteredFxTrades")]
+        public async Task<ActionResult<IEnumerable<FXTradesModel>>> GetFilteredFxTrades()
+        {
+            var ListOfAllFxTrades = await _context.FxTrades.ToListAsync();
+
+            return _controllerService.Filter(ListOfAllFxTrades);
         }
 
         // GET: api/FxTrades/5

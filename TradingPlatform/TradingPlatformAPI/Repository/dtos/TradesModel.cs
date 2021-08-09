@@ -4,6 +4,7 @@ namespace TradingPlatformAPI.Repository.dtos
 {
     public class TradesModel
     {
+        public int TradeId { get; set; }
         public decimal? DealPrice { get; set; }
         public int? TradeQuantity { get; set; }
         public decimal? TradeTotal { get; set; }
