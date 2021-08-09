@@ -42,7 +42,9 @@ namespace TradingPlatformAPI
             services.AddDbContext<Models.TradingPlatformDatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddControllers();
-            
+
+            services.AddHttpClient();
+
             services.AddCors();
 
             services.AddSwaggerGen();
@@ -58,6 +60,8 @@ namespace TradingPlatformAPI
 
             builder.RegisterType<TradesControllerService>().As<ITradesControllerService>();
             builder.RegisterType<TradesCalculationService>().As<ITradesCalculationService>();
+
+            builder.RegisterType<FXTradesControllerService>().As<IFXTradesControllerService>();
 
         }
 

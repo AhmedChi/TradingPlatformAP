@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8/6zLOMcQupjUXg0BtKNpliyarE9qWzOFWgES3ksbxmR02bWmt7rLk64y1uJO5fCzwmQJG9IkeaiX28qvQgzIQ==",
+  "dgSpecHash": "wu6jagkvamyfHmfqN4SpxYGSxUIeHmcSW4Xj6tzueQlsb5ZkrbkIj7xLjWW9naNZKG5nREYBRgF7f51b6Nxr5w==",
   "success": true,
   "projectFilePath": "C:\\Users\\ahmed\\Documents\\Library\\Work\\Home\\Programs\\.Net\\src A\\TradingPlatformAP\\TradingPlatform\\TradingPlatformAPI\\TradingPlatformAPI.csproj",
   "expectedPackageFiles": [
@@ -185,7 +185,8 @@
     "C:\\Users\\ahmed\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\ahmed\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\ahmed\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\ahmed\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\ahmed\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\ahmed\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
   ],
   "logs": []
 }
