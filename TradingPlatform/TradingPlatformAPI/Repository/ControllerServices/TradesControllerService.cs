@@ -42,7 +42,6 @@ namespace TradingPlatformAPI.Repository.ControllerServices
             foreach (var trade in sellingTradeList)
             {
                 trade.OldTradeTotal = trade.TradeTotal;
-                trade.DealPrice = currentDealPrice;
                 trade.TradeTotal = trade.TradeQuantity * currentDealPrice;
                 trade.ProfitOrLoss = ( trade.TradeTotal - trade.OldTradeTotal ) / 100;
             }
