@@ -30,7 +30,7 @@ namespace TradingPlatformAPI.Repository.ControllerServices
                     },
                     UnderlyingCurrencyId = m.fxu.fxb.UnderlyingCurrencyId,
                     UnderlyingCurrency = new Currencies
-                    {
+                {
                         CurrencyId = m.uc.CurrencyId,
                         CurrencyCode = m.uc.CurrencyCode,
                         CurrencyName = m.uc.CurrencyName,

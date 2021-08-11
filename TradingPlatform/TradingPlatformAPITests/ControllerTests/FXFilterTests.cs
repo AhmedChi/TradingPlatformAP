@@ -24,6 +24,8 @@ namespace TradingPlatformAPITests.ControllerTests
                     BaseNominal = 1,
                     UnderlyingNominal = 10.3943m,
                     BaseQuotation = false,
+                    BaseCurrency = new Currencies {CurrencyName = "US Dollar"},
+                    UnderlyingCurrency = new Currencies {CurrencyName = "Swiss Franc"},
                     BaseCurrencyId = 1,
                     UnderlyingCurrencyId = 6
                 }
