@@ -6,9 +6,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Linq;
-using System.Reflection;
 using TradingPlatformAPI.Repository.CalculationServicies;
 using TradingPlatformAPI.Repository.ControllerServices;
 using IHostingEnvironment = Microsoft.Extensions.Hosting.IHostingEnvironment;
@@ -38,7 +35,9 @@ namespace TradingPlatformAPI
             services.AddDbContext<Models.TradingPlatformDatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddControllers();
-            
+
+            services.AddHttpClient();
+
             services.AddCors();
 
             services.AddSwaggerGen();

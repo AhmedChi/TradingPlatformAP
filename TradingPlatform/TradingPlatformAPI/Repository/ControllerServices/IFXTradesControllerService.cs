@@ -6,6 +6,6 @@ namespace TradingPlatformAPI.Repository.ControllerServices
 {
     public interface IFXTradesControllerService
     {
-        List<FXTradesModel> Filter(List<FxTrades> actualResults);
+        List<FXTradesModel> Filter(List<FxTrades> actualResults, List<Currencies> currencies);
     }
 }

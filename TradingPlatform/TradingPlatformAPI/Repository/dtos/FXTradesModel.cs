@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,6 +13,9 @@ namespace TradingPlatformAPI.Repository.dtos
         public decimal BaseNominal { get; set; }
         public decimal UnderlyingNominal { get; set; }
         public bool BaseQuotation { get; set; }
+        public int BaseCurrencyId { get; set; }
+        public int UnderlyingCurrencyId { get; set; }
+
         public virtual Currencies BaseCurrency { get; set; }
         public virtual Currencies UnderlyingCurrency { get; set; }
     }
