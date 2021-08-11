@@ -3,10 +3,6 @@
 
 # User-specific files
 *.suo
-*.exe
-*.pdb
-*.manifest
-*.cache
 *.user
 *.userosscache
 *.sln.docstates
@@ -24,6 +20,7 @@ x86/
 bld/
 [Bb]in/
 [Oo]bj/
+[Ll]og/
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -166,12 +163,11 @@ csx/
 ecf/
 rcf/
 
-# Microsoft Azure ApplicationInsights config file
-ApplicationInsights.config
-
-# Windows Store app package directory
+# Windows Store app package directories and files
 AppPackages/
 BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt
 
 # Visual Studio cache files
 # files ending in .cache can be ignored
@@ -189,6 +185,10 @@ ClientBin/
 *.publishsettings
 node_modules/
 orleans.codegen.cs
+
+# Since there are multiple workflows, uncomment next line to ignore bower_components 
+# (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
+#bower_components/
 
 # RIA/Silverlight projects
 Generated_Code/
@@ -235,42 +235,11 @@ _Pvt_Extensions
 
 # Paket dependency manager
 .paket/paket.exe
+paket-files/
 
 # FAKE - F# Make
 .fake/
 
-#OS junk files
-[Tt]humbs.db
-*.DS_Store
-
-#Visual Studio files
-*.[Oo]bj
-*.user
-*.aps
-*.pch
-*.vspscc
-*.vssscc
-*_i.c
-*_p.c
-*.ncb
-*.suo
-*.tlb
-*.tlh
-*.bak
-*.[Cc]ache
-*.ilk
-*.log
-*.lib
-*.sbr
-*.sdf
-*.sdf
-ipch/
-obj/
-[Bb]in
-[Dd]ebug*/
-[Rr]elease*/
-Ankh.NoLoad
-
-#Tooling
-_ReSharper*/
-*.resharper
+# JetBrains Rider
+.idea/
+*.sln.iml
